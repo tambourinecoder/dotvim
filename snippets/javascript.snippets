@@ -1,0 +1,183 @@
+# vim:ft=snippets:
+# vim:fdm=marker
+# vim:fdl=0
+
+# Misc {{{
+#|
+#|
+snippet ust "use strict"
+"use strict";
+endsnippet
+
+snippet db "debugger"
+debugger
+endsnippet
+#|
+#|
+# }}}
+# Functions {{{
+#|
+#|
+snippet nf "named function"
+function ${1:fn_name}(${2}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet inf "inline named function"
+function ${1:fn_name}(${2}) { ${VISUAL}$0 }
+endsnippet
+
+snippet af "anonymou function"
+function(${1}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet iaf "inline anonymous function"
+function(${1}) { ${VISUAL}$0 }
+endsnippet
+
+snippet iife "Immediately-Invoked Function Expression (iife)"
+(function ($1) {
+	${VISUAL}$0
+}(${2:$1}))
+endsnippet
+#|
+#|
+# }}}
+# Comments {{{
+#|
+#|
+snippet ci "comment inline"
+/* $0 */
+endsnippet
+
+snippet cb "comment banner"
+/**
+ * $0
+ */
+endsnippet
+#|
+#|
+# }}}
+# console {{{
+#|
+#|
+snippet cls "console.log"
+console.log('${1:string}')
+endsnippet
+
+snippet clo "console.log"
+console.log(${1})
+endsnippet
+#|
+#|
+# }}}
+# Node {{{
+#|
+#|
+snippet vre "" b
+var ${2:${1/_([a-z])/\u$1/g}} = require('${1}')
+endsnippet
+
+snippet ,re ""
+, ${2:${1/_([a-z])/\u$1/g}} = require('${1}')
+endsnippet
+
+snippet moe "module.exports" b
+module.exports$0
+endsnippet
+#|
+#|
+# }}}
+# Mocha / Jasmine / Chai {{{
+#|
+#|
+snippet de "Describe (js)" b
+describe('${1:description}', function() {
+	$0
+})
+endsnippet
+
+snippet co "Context (js)" b
+context('${1:description}', function() {
+	$0
+})
+endsnippet
+
+snippet jit "it (js)" b
+it('${1:description}', function() {
+	$0
+})
+endsnippet
+
+snippet bea "beforeEach (js)" b
+beforeEach(function() {
+	$0
+})
+endsnippet
+
+snippet aea "afterEach (js)" b
+afterEach(function() {
+	$0
+})
+endsnippet
+
+
+snippet she "should.equal (js)" b
+$1.should.equal($0)
+endsnippet
+
+snippet sho "should.be.ok (js)" b
+$0.should.be.ok
+endsnippet
+#|
+#|
+# }}}
+# Angular {{{
+#|
+#|
+snippet ngc "define controller"
+${1}.controller('$2', function(${3:$scope}) {
+  $0
+})
+endsnippet
+
+snippet ngs "define service"
+${1}.service('$2', function($3) {
+  $0
+
+	return {
+
+	}
+})
+endsnippet
+
+snippet ngf "define factory"
+${1}.factory('$2', function($3) {
+  $0
+
+	return {
+
+	}
+})
+endsnippet
+
+snippet ngd "define directive"
+${1}.directive('$2', function($3) {
+  return {
+    $0
+  }
+})
+endsnippet
+
+
+snippet nglf "linking function"
+function(scope, element, attrs) {
+  $0
+}
+endsnippet
+#|
+#|
+# }}}
