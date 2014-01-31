@@ -253,6 +253,15 @@ map ;pt :call AutoPairsToggle()<Return>
 "|
 "|
 " }}}
+" Clever-f (deps: 'rhysd/clever-f.vim') {{{
+"|
+"|
+let g:clever_f_across_no_line = 0
+let g:clever_f_ignore_case = 0
+let g:clever_f_smart_case = 1
+"|
+"|
+" }}}
 " Easy-Motion (deps: 'Lokaltog/vim-easymotion') {{{
 "|
 "|
