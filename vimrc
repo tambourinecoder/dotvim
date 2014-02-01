@@ -210,6 +210,13 @@ nnoremap \-ct  :tabnext<Return>
 "|
 "|
 " }}}
+" Better JSON (deps: 'elzr/vim-json') {{{
+"|
+"|
+let g:vim_json_syntax_conceal = 0
+"|
+"|
+"}}}
 " UltiSnips (deps: 'vim-scripts/UltiSnips) {{{
 "|
 "|
