@@ -516,7 +516,7 @@ hi VertSplit ctermbg=Black
 nnoremap <silent>\-N :set number!<Return>
 
 " Clipboard (Mac OS X)
-vmap <silent>Y :w !reattach-to-user-namespace pbcopy<CR><CR>
+vmap Y ygv:!echo '<C-r>"' \| reattach-to-user-namespace pbcopy<Return>ugv
 
 " Macros
 nnoremap <C-e> @q
