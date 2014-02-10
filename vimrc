@@ -13,7 +13,10 @@ syntax on
 
 "let g:kolor_bold=0
 "colorscheme kolor
-colorscheme babymate256
+
+"colorscheme babymate256
+
+colorscheme Muon
 "|
 "|
 " }}}
