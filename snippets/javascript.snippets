@@ -15,33 +15,52 @@ endsnippet
 #|
 #|
 # }}}
+# Generators {{{
+#|
+#|
+snippet ng "named generator" w
+function* ${1:fn_name} (${2}) {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet ag "anonymous generator" w
+function* (${1}) {
+	${VISUAL}$0
+}
+endsnippet
+
+#|
+#|
+# }}}
 # Functions {{{
 #|
 #|
 snippet nf "named function" w
-function ${1:fn_name}(${2}) {
+function ${1:fn_name} (${2}) {
 	${VISUAL}$0
 }
 endsnippet
 
 snippet inf "inline named function" w
-function ${1:fn_name}(${2}) { ${VISUAL}$0 }
+function ${1:fn_name} (${2}) { ${VISUAL}$0 }
 endsnippet
 
 snippet af "anonymou function" w
-function(${1}) {
+function (${1}) {
 	${VISUAL}$0
 }
 endsnippet
 
 snippet iaf "inline anonymous function" w
-function(${1}) { ${VISUAL}$0 }
+function (${1}) { ${VISUAL}$0 }
 endsnippet
 
 snippet iife "Immediately-Invoked Function Expression (iife)"
 (function ($1) {
+	"use strict";
 	${VISUAL}$0
-}(${2:$1}))
+})(${2:$1});
 endsnippet
 #|
 #|
@@ -95,31 +114,31 @@ endsnippet
 #|
 #|
 snippet de "Describe (js)" b
-describe('${1:description}', function() {
+describe('${1:description}', function () {
 	$0
 })
 endsnippet
 
 snippet co "Context (js)" b
-context('${1:description}', function() {
+context('${1:description}', function () {
 	$0
 })
 endsnippet
 
 snippet jit "it (js)" b
-it('${1:description}', function($2) {
+it('${1:description}', function ($2) {
 	$0
 })
 endsnippet
 
 snippet bea "beforeEach (js)" b
-beforeEach(function($1) {
+beforeEach(function ($1) {
 	$0
 })
 endsnippet
 
 snippet aea "afterEach (js)" b
-afterEach(function($1) {
+afterEach(function ($1) {
 	$0
 })
 endsnippet
@@ -139,13 +158,13 @@ endsnippet
 #|
 #|
 snippet ngc "define controller"
-${1}.controller('$2', function(${3:$scope}) {
+${1}.controller('$2', function (${3:$scope}) {
   $0
 })
 endsnippet
 
 snippet ngs "define service"
-${1}.service('$2', function($3) {
+${1}.service('$2', function ($3) {
   $0
 
 	return {
@@ -155,7 +174,7 @@ ${1}.service('$2', function($3) {
 endsnippet
 
 snippet ngf "define factory"
-${1}.factory('$2', function($3) {
+${1}.factory('$2', function ($3) {
   $0
 
 	return {
@@ -165,7 +184,7 @@ ${1}.factory('$2', function($3) {
 endsnippet
 
 snippet ngd "define directive"
-${1}.directive('$2', function($3) {
+${1}.directive('$2', function ($3) {
   return {
     $0
   }
@@ -174,7 +193,7 @@ endsnippet
 
 
 snippet nglf "linking function"
-function(scope, element, attrs) {
+function (scope, element, attrs) {
   $0
 }
 endsnippet
